@@ -45,7 +45,7 @@ def save():
     if img:
         ext = StringVar()
         name = filedialog.asksaveasfilename(initialfile="Untitled", title="Select file", typevariable=ext, filetypes=(
-            ('JPEG', ('*.jpg', '*.jpeg', '*.jpe'))))
+            ('JPEG', ('*.jpg', '*.jpeg', '*.jpe')), ('PNG', '*.png'), ('GIF', '*.gif')))
         if name:
             img.save(name + "." + ext.get().lower())  # splice the string and the extension.
 
